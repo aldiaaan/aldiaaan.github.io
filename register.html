@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link rel="stylesheet" type="text/css" href="./register.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <main>
+      <section id="register">
+        <div id="register-form" class="row valign-wrapper">
+          <div class="col offset-l2 l8 s12">
+            <div class="card grey darken-4">
+              <div class="card-content">
+                <div class="title-container">
+                  <svg viewBox="0 0 478 840" class="logo white-text">
+                    <polygon
+                      fill="currentColor"
+                      points="344 629 446 520 411 521 478 425 425 447 457 386 456 273 427 292 425 157 400 182 261 3 261 317 326 438 285 512 239 472 239 469 193 509 152 435 217 314 217 0 78 179 53 154 51 289 22 270 21 383 53 444 0 422 67 518 32 517 134 626 179 626 204 667 118 746 158 747 143 796 196 769 196 795 239 837 239 840 282 798 282 772 335 799 320 750 360 749 274 670 299 629 344 629"
+                    />
+                  </svg>
+                  <div class="title">
+                    <p class="white-text">Aisenfield Guild</p>
+                    <p class="grey-text" style="font-size: 0.857rem;">
+                      Registration Form
+                    </p>
+                  </div>
+                </div>
+
+                <form autocomplete="off">
+                  <div class="row">
+                    <div class="col s12 l6">
+                      <div class="input-field col s12">
+                        <input
+                          placeholder="Fullname"
+                          id="fullname"
+                          type="text"
+                          class="validate white-text"
+                        />
+                        <label for="fullname">Fullname</label>
+                      </div>
+                      <div class="input-field col s12">
+                        <input
+                          placeholder="Profession"
+                          id="profession"
+                          type="text"
+                          class="validate white-text"
+                        />
+                        <label for="profession">Profession</label>
+                      </div>
+                      <div class="input-field col s12">
+                        <input
+                          placeholder="NIK"
+                          id="nik"
+                          type="text"
+                          class="validate white-text"
+                        />
+                        <label for="nik">NIK</label>
+                      </div>
+                      <div class="col s12">
+                        <div class="row" style="margin-bottom: 0px;">
+                          <div class="input-field col s8" id="dropdown-form">
+                            <select class="validate">
+                              <option value="1">1 Month</option>
+                              <option value="3">3 Months</option>
+                              <option value="6">6 Months</option>
+                              <option value="12">12 Months</option>
+                            </select>
+                            <label for="join-period">Join Period</label>
+                          </div>
+                          <div class="input-field col s4">
+                            <input
+                              id="birthdate"
+                              type="text"
+                              placeholder="Birthdate"
+                              class="validate datepicker white-text"
+                              type="text"
+                            />
+                            <label for="birthdate">Birthdate</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 l6">
+                      <div class="input-field col s12">
+                        <input
+                          placeholder="Codename"
+                          id="codename"
+                          type="text"
+                          class="validate white-text"
+                        />
+                        <label for="address">Codename</label>
+                      </div>
+
+                      <div class="input-field col s12">
+                        <input
+                          placeholder="Address"
+                          id="address"
+                          type="text"
+                          class="validate white-text"
+                        />
+                        <label for="address">Address</label>
+                      </div>
+                      <div class="input-field col s12" id="dropdown-form">
+                        <select class="validate">
+                          <option value="civilian">Civilian</option>
+                          <option value="guild-member">Guild Member</option>
+                        </select>
+                        <label for="member-type">Member Type</label>
+                      </div>
+                      <div class="input-field col s12">
+                        <textarea
+                          cols="4"
+                          id="textarea1"
+                          class="materialize-textarea validate white-text"
+                          placeholder="Skillset"
+                        ></textarea>
+                        <label for="skillset" id="skillset">Skillset</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="card-action right-align">
+                <a href="#" class="btn orange">REGISTER</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("select").formSelect();
+      $(".datepicker").datepicker();
+      // $(".datepicker").datepicker("setDate", new Date());
+      // $(".datepicker").datepicker("setInputValue");
+      // $(".datepicker").val(new Date());
+    });
+  </script>
+</html>

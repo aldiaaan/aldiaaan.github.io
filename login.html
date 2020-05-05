@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link rel="stylesheet" type="text/css" href="./login.css" />
+    <title>Login</title>
+  </head>
+  <body class="grey darken-4">
+    <main>
+      <section id="login" class="">
+        <div class="row" id="login-form">
+          <div class="col offset-s1 s10 offset-m3 m6 offset-l4 l4">
+            <div class="card grey darken-4 white-text">
+              <div class="card-content">
+                <div class="title-container">
+                  <svg viewBox="0 0 478 840" class="logo white-text">
+                    <polygon
+                      fill="currentColor"
+                      points="344 629 446 520 411 521 478 425 425 447 457 386 456 273 427 292 425 157 400 182 261 3 261 317 326 438 285 512 239 472 239 469 193 509 152 435 217 314 217 0 78 179 53 154 51 289 22 270 21 383 53 444 0 422 67 518 32 517 134 626 179 626 204 667 118 746 158 747 143 796 196 769 196 795 239 837 239 840 282 798 282 772 335 799 320 750 360 749 274 670 299 629 344 629"
+                    />
+                  </svg>
+                  <div class="title">
+                    <p>Aisenfield Guild</p>
+                    <p class="grey-text" style="font-size: 0.857rem;">
+                      Login Form
+                    </p>
+                  </div>
+                </div>
+
+                <form autocomplete="off">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input
+                        placeholder="Username"
+                        id="username"
+                        type="text"
+                        class="validate white-text"
+                      />
+                      <label for="username">Username</label>
+                    </div>
+                    <div class="input-field col s12">
+                      <input
+                        placeholder="Password"
+                        id="password"
+                        type="password"
+                        class="validate white-text"
+                      />
+                      <label for="password">Password</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s6">
+                      <p>
+                        <label>
+                          <input
+                            type="checkbox"
+                            class="filled-in remember-me"
+                            checked="checked"
+                          />
+                          <span style="font-size: 0.875rem;">Remember me</span>
+                        </label>
+                      </p>
+                    </div>
+                    <div class="col s6 right-align">
+                      <a
+                        class="grey-text"
+                        href="/register.html#"
+                        style="font-size: 0.875rem;"
+                        >Forgot Password</a
+                      >
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <a class="btn btn-block orange">LOGIN</a>
+                    </div>
+                  </div>
+                </form>
+
+                <div class="row center-align">
+                  <p class="col s12" style="font-size: 0.875rem;">
+                    <span class="grey-text">Not registered yet?</span>
+                    <a href="/register.html" class="white-text">Register Now</a>
+                    <span class="grey-text">or login with</span>
+                  </p>
+                </div>
+                <div class="row">
+                  <div class="social-buttons">
+                    <a
+                      href="/register.html#google"
+                      class="btn grey lighten-2 black-text"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 48 48"
+                        width="24px"
+                        height="24px"
+                        class="push-hcenter"
+                      >
+                        <path
+                          fill="#FFC107"
+                          d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+                        />
+                        <path
+                          fill="#FF3D00"
+                          d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+                        />
+                        <path
+                          fill="#4CAF50"
+                          d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+                        />
+                        <path
+                          fill="#1976D2"
+                          d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+                        />
+                      </svg>
+                    </a>
+
+                    <a
+                      href="/register.html#twitter"
+                      class="btn light-blue darken-1"
+                      ><svg
+                        fill="#fff"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 50 50"
+                        width="24px"
+                        height="24px"
+                        class="push-hcenter"
+                      >
+                        <path
+                          d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"
+                        />
+                      </svg>
+                    </a>
+
+                    <a href="/register.html#facebook" class="btn blue darken-4">
+                      <?xml version="1.0"?>
+                      <svg
+                        fill="#FFFFFF"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 50 50"
+                        width="24px"
+                        height="24px"
+                        class="push-hcenter"
+                      >
+                        <path
+                          d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z"
+                        />
+                      </svg>
+                    </a>
+
+                    <a href="/register.html#github" class="btn black">
+                      <svg
+                        fill="#ffffff"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 50 50"
+                        width="24px"
+                        height="24px"
+                        class="push-hcenter"
+                      >
+                        <path
+                          d="M 33 29 C 31.203125 29 30 30.515625 30 33 C 30 35.484375 30.890625 38.046875 33 38 C 35.21875 37.949219 36.019531 35.777344 36 33 C 35.984375 30.515625 34.792969 29 33 29 Z M 44.261719 17.066406 C 44.535156 15.722656 44.652344 10.964844 42.679688 6 C 42.679688 6 38.148438 6.496094 31.296875 11.199219 C 29.863281 10.800781 27.429688 10.601563 25 10.601563 C 22.570313 10.601563 20.140625 10.800781 18.699219 11.195313 C 11.851563 6.496094 7.324219 6 7.324219 6 C 5.347656 10.964844 5.445313 15.609375 5.738281 17.066406 C 3.417969 19.585938 2 22.609375 2 26.742188 C 2 44.707031 16.90625 44.996094 20.667969 44.996094 C 21.519531 44.996094 23.210938 44.996094 25 45 C 26.789063 44.996094 28.484375 44.996094 29.332031 44.996094 C 33.09375 44.996094 48 44.707031 48 26.742188 C 48 22.609375 46.582031 19.585938 44.261719 17.066406 Z M 25.140625 43 L 25 43 C 15.570313 43 8.15625 41.660156 8.15625 32.496094 C 8.15625 30.300781 8.933594 28.265625 10.773438 26.574219 C 13.84375 23.753906 19.035156 25.246094 24.929688 25.246094 C 24.953125 25.246094 25.050781 25.246094 25.070313 25.246094 C 30.964844 25.246094 36.160156 23.757813 39.230469 26.574219 C 41.070313 28.265625 41.84375 30.300781 41.84375 32.496094 C 41.84375 41.660156 34.570313 43 25.140625 43 Z M 17 29 C 15.207031 29 14 31.015625 14 33.5 C 14 35.984375 15.207031 38 17 38 C 18.796875 38 20 35.984375 20 33.5 C 20 31.015625 18.796875 29 17 29 Z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
