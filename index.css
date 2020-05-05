@@ -12,11 +12,13 @@ section#main {
   color: white;
   min-height: 100vh;
 }
-
-section {
-  min-height: 100vh;
+section#news {
+  background-color: #1d1d1d;
+  overflow-x: hidden;
 }
+
 section#about-us {
+  min-height: 100vh;
   position: relative;
 }
 .background-grey {
@@ -36,6 +38,7 @@ section#about-us {
   z-index: -2;
   background-position: 20% 25%;
   background-image: url("assets/about-us.jpg");
+  background-size: cover;
 }
 
 .winner-image::after {
@@ -67,10 +70,6 @@ section#about-us {
   .winner-image::after {
     display: none;
   }
-}
-
-section#news {
-  background-color: #1d1d1d;
 }
 
 .title-container {
