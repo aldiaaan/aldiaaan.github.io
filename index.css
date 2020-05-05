@@ -7,6 +7,7 @@ section#main {
     ),
     url("./assets/main-cover.jpg");
   background-size: cover;
+  background-position: 60%;
   background-repeat: no-repeat;
   color: white;
   min-height: 100vh;
