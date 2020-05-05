@@ -7,7 +7,6 @@ section#main {
     ),
     url("./assets/main-cover.jpg");
   background-size: cover;
-  background-position: 60%;
   background-repeat: no-repeat;
   color: white;
   min-height: 100vh;
@@ -37,8 +36,9 @@ section#about-us {
   bottom: 0;
   z-index: -2;
   background-position: 20% 25%;
-  background-image: url("assets/about-us.jpg");
+  background-image: url("assets/about-us-desktop.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .winner-image::after {
@@ -58,8 +58,9 @@ section#about-us {
         rgba(29, 29, 29, 1),
         rgba(29, 29, 29, 0.8)
       ),
-      url("assets/about-us.jpg");
+      url("assets/about-us-mobile.jpg");
     background-position: 50% 50%;
+    background-size: cover;
   }
   .background-grey {
     display: none;
