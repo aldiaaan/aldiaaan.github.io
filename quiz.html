@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link rel="stylesheet" type="text/css" href="./quiz.css" />
+    <title>Quiz 2</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <p class="header-title white-text">Hardest Part</p>
+          <p class="white-text">
+            1. Background image di setiap sectionnya agar resposif karena di
+            beberapa device gambarnya aneh
+          </p>
+          <p class="grey-text">
+            > Solusi: saya menemukan caranya di stack overflow yaitu dengan
+            menambahkan css style `background-size: cover`
+          </p>
+          <p class="white-text">
+            2. Pada bagian carousel, saya ingin untuk `overflow-x: hidden` di
+            satu sisi saja yaitu di kiri
+          </p>
+          <p class="grey-text">
+            > Solusi: saya menemukan caranya di stack overflow yaitu dengan
+            menambahkan css style `clip-path: inset(-100vw -100vw -100vw 0);`
+            pada carousel nya
+          </p>
+          <p class="white-text">
+            3. Menemukan komposisi warna yang menurut saya cocok
+          </p>
+          <p class="grey-text">
+            > Solusi: Saya mengambil banyak referensi dari dribbble dan forum
+            diskusi mengenai warna yang akan saya gunakan
+          </p>
+        </div>
+        <div class="col s12">
+          <p class="header-title white-text">Impossible Part</p>
+          <p class="white-text">
+            1. Background image di section
+          </p>
+          <p class="grey-text">
+            Saya ingin agar image di section menampilkan bagian yang sesuai di
+            device kurang dari lg (tablet, smartphone) dan pc, saya sudah
+            mencoba berbagai style dengan `background-position` dan berhasil.
+            namun jika saya lihat di view layar besar maka background-image
+            tersebut jadi kepotong, lalu saat saya ubah menjadi
+            `background-size: cover`, background-position tidak berfungsi dan
+            menampilkan bagian gambar yang tidak diinginkan. Alhasil, saya
+            mengcrop gambarnya agar gambarnya sesuai dengan paint dan tetap
+            dengan `background-size: cover`.
+          </p>
+          <img src="assets/impossible.png" class="responsive-img" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
