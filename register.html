@@ -140,13 +140,24 @@
     </main>
   </body>
   <script>
+    const getCookieByName = (name, cb) => {
+      document.cookie.split(";").map((data) => {
+        [key, value] = data.split("=");
+        if (name === key.trim()) {
+          cb(value);
+        }
+      });
+    };
     $(document).ready(function () {
-      console.log(document.cookie);
       $("select").formSelect();
       $(".datepicker").datepicker();
-      // $(".datepicker").datepicker("setDate", new Date());
-      // $(".datepicker").datepicker("setInputValue");
-      // $(".datepicker").val(new Date());
+      const DOMNodes = {
+        fullname: document.getElementById("fullname"),
+      };
+      getCookieByName(
+        "fullname",
+        (fullname) => (DOMNodes.fullname.value = fullname)
+      );
     });
   </script>
 </html>
