@@ -1,7 +1,7 @@
 // client id: 854323361392-ql1indjuus9ng9rr999hai2uimjlbsmj.apps.googleusercontent.com
 // client secret: xRBbaoGAQ8yCU_fufH8K90u1
 
-const onSignIn = (user) => {
+const onSignIn = function (user) {
   const profile = user.getBasicProfile();
   console.log(user);
   console.log("testtest");
