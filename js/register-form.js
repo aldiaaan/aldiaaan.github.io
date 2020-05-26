@@ -1,4 +1,4 @@
-const gapiHandler = function () {
+function gapiHandler() {
   console.log("gapi loaded ... ");
   gapi.load("auth2", function () {
     auth2 = gapi.auth2.init({
@@ -12,7 +12,7 @@ const gapiHandler = function () {
       console.log(`signed in : ${auth2.isSignedIn.get()}`);
     });
   });
-};
+}
 
 const renderPhoneCodes = () => {
   let phoneCodes = [
