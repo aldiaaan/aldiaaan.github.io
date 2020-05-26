@@ -10,6 +10,8 @@ function gapiHandler() {
     auth2.then(function () {
       auth2 = gapi.auth2.getAuthInstance();
       var profile = auth2.currentUser.get().getBasicProfile();
+      console.log($);
+      $("#fullname").val(profile.getName());
       console.log("ID: " + profile.getId());
       console.log("Full Name: " + profile.getName());
       console.log("Given Name: " + profile.getGivenName());
