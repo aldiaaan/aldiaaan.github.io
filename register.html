@@ -21,7 +21,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
     <link rel="stylesheet" href="css/register.css" />
     <title>Register</title>
   </head>
@@ -31,8 +31,8 @@
       <div class="divider"></div>
       <div class="row" style="margin-top: 1rem; padding: 0.5rem 0;">
         <p class="sub-title">You need to connect your account first</p>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
-        <a href="#" class="sso-btn"
+        <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+        <a href="#" class="sso-btn" id="google-sso"
           ><svg width="16" height="16" viewBox="0 0 16 16">
             <defs>
               <path
@@ -172,6 +172,11 @@
         </p>
       </div>
     </div>
+    <script
+      src="https://apis.google.com/js/platform.js?onload=renderButton"
+      async
+      defer
+    ></script>
     <script src="js/register.js"></script>
   </body>
 </html>
