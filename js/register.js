@@ -1,13 +1,8 @@
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log("Name: " + profile.getName());
-  console.log("Image URL: " + profile.getImageUrl());
-  console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
-
 function renderButton() {
   console.log("callback called");
+  console.log(
+    "User signed in " + gapi.auth2.getAuthInstance().isSignedIn.get()
+  );
   gapi.load("auth2", function () {
     auth2 = gapi.auth2.init({
       client_id:
