@@ -12,6 +12,7 @@ function renderButton() {
       {},
       function (googleUser) {
         console.log("Signed in: " + googleUser.getBasicProfile().getName());
+        location.reload();
       },
       function (error) {
         console.log("Sign-in error", error);
