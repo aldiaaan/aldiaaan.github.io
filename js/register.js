@@ -1,4 +1,4 @@
-function renderButton() {
+function gapiHandler() {
   console.log("callback called");
   gapi.load("auth2", function () {
     auth2 = gapi.auth2.init({
