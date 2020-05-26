@@ -7,7 +7,7 @@ function renderButton() {
       cookiepolicy: "single_host_origin",
       scope: "profile",
     });
-
+    console.log(`SIGNED IN: ${auth2.isSignedIn.get()}`);
     auth2.attachClickHandler(
       element,
       {},
@@ -22,9 +22,3 @@ function renderButton() {
 
   element = document.getElementById("google-sso");
 }
-
-$(document).ready(function () {
-  console.log(
-    "User signed in " + gapi.auth2.getAuthInstance().isSignedIn.get()
-  );
-});
