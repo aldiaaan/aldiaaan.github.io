@@ -18,10 +18,13 @@ function renderButton() {
         console.log("Sign-in error", error);
       }
     );
-    console.log(
-      "User signed in " + gapi.auth2.getAuthInstance().isSignedIn.get()
-    );
   });
 
   element = document.getElementById("google-sso");
 }
+
+$(document).ready(function () {
+  console.log(
+    "User signed in " + gapi.auth2.getAuthInstance().isSignedIn.get()
+  );
+});
