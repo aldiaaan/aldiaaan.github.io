@@ -279,12 +279,14 @@ const checkFormInput = () => {
     email: $("#email"),
     ktp: $("#ktp"),
   };
+  let flag = true;
   if (DOMNodes.birthDate.toString().length === 0) {
     $("#birthdate")
       .addClass("invalid")
       .next()
       .next()
       .attr("data-error", "Birthdate cannot be empty");
+    flag = false;
   }
   if (DOMNodes.skillset.toString().length === 0) {
     DOMNodes.skillset
@@ -292,6 +294,7 @@ const checkFormInput = () => {
       .next()
       .next()
       .attr("data-error", "Skillset cannot be empty");
+    flag = false;
   }
   if (DOMNodes.fullname.val().length === 0) {
     DOMNodes.fullname
@@ -299,6 +302,7 @@ const checkFormInput = () => {
       .next()
       .next()
       .attr("data-error", "Name cannot be empty");
+    flag = false;
   }
   if (DOMNodes.codename.val().length === 0) {
     DOMNodes.codename
@@ -306,6 +310,7 @@ const checkFormInput = () => {
       .next()
       .next()
       .attr("data-error", "Codename cannot be empty");
+    flag = false;
   }
   if (DOMNodes.password.val() !== DOMNodes.confirmPassword.val()) {
     DOMNodes.confirmPassword.addClass("invalid");
@@ -315,6 +320,7 @@ const checkFormInput = () => {
       .next()
       .next()
       .attr("data-error", "Password mismatch");
+    flag = false;
   }
   if (DOMNodes.password.val().length < 8) {
     DOMNodes.password
@@ -324,6 +330,7 @@ const checkFormInput = () => {
       .next()
       .next()
       .attr("data-error", "Password must be 8 characters long");
+    flag = false;
   }
   if (DOMNodes.address.val().length === 0) {
     DOMNodes.address
@@ -331,6 +338,7 @@ const checkFormInput = () => {
       .next()
       .next()
       .attr("data-error", "Address cannot be empty");
+    flag = false;
   }
   if (DOMNodes.profession.val().length === 0) {
     DOMNodes.profession
@@ -338,6 +346,7 @@ const checkFormInput = () => {
       .next()
       .next()
       .attr("data-error", "Profession cannot be empty");
+    flag = false;
   }
   if (DOMNodes.nik.val().length === 0) {
     DOMNodes.nik
@@ -345,6 +354,7 @@ const checkFormInput = () => {
       .next()
       .next()
       .attr("data-error", "NIK cannot be empty");
+    flag = false;
   }
   if (DOMNodes.email.val().length === 0) {
     DOMNodes.email
@@ -352,12 +362,14 @@ const checkFormInput = () => {
       .next()
       .next()
       .attr("data-error", "Email cannot be empty");
+    flag = false;
   } else if (!/\S+@\S+\.\S+/.test(DOMNodes.email.val())) {
     DOMNodes.email
       .addClass("invalid")
       .next()
       .next()
       .attr("data-error", "Invalid email format, missing `@`");
+    flag = false;
   }
   if (DOMNodes.skillset.val().length === 0) {
     DOMNodes.skillset
@@ -365,12 +377,14 @@ const checkFormInput = () => {
       .next()
       .next()
       .attr("data-error", "Skillset cannot be empty");
+    flag = false;
   }
   if (DOMNodes.ktp.val().length === 0) {
     DOMNodes.ktp
       .addClass("invalid")
       .next()
       .attr("data-error", "You must upload your KTP");
+    flag = false;
   }
   let phoneNumber = DOMNodes.phoneNumber.val();
   let telephoneNumber = DOMNodes.telephoneNumber.val();
@@ -380,6 +394,7 @@ const checkFormInput = () => {
       .next()
       .next()
       .attr("data-error", "Invalid phone number format");
+    flag = false;
   }
   if (!(telephoneNumber.length > 7 && telephoneNumber.length <= 15)) {
     DOMNodes.telephoneNumber
@@ -387,11 +402,36 @@ const checkFormInput = () => {
       .next()
       .next()
       .attr("data-error", "Invalid phone number format");
+    flag = false;
   }
+  console.log(flag);
+  return flag;
+};
+
+const randomNumber = function (min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+};
+
+const generateStrongPassword = function () {
+  let password = "";
+  for (let i = 0; i < 4; i++) {
+    password += String.fromCharCode(randomNumber(49, 57));
+  }
+  for (let i = 0; i < 2; i++) {
+    password += String.fromCharCode(randomNumber(97, 122));
+  }
+  for (let i = 0; i < 3; i++) {
+    password += String.fromCharCode(randomNumber(65, 90));
+  }
+  for (let i = 0; i < 2; i++) {
+    password += String.fromCharCode(randomNumber(58, 64));
+  }
+  return password;
 };
 $(document).ready(function () {
   $(".datepicker").datepicker();
   renderPhoneCodes();
+  $("#password").val(generateStrongPassword());
   const passwordShowed = $("#password-showed");
   const passwordUnshowed = $("#password-unshowed");
   const passwordField = $("#password");
