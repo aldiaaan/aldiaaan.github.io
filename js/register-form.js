@@ -387,7 +387,7 @@ const checkFormInput = () => {
       .addClass("invalid")
       .next()
       .next()
-      .attr("data-error", "Invalid email format, missing `@`");
+      .attr("data-error", "Invalid email format");
     flag = false;
   }
   if (DOMNodes.skillset.val().length === 0) {
@@ -466,7 +466,12 @@ $(document).ready(function () {
   const passwordField = $("#password");
 
   $(".register-btn").on("click", function () {
-    checkFormInput();
+    if (checkFormInput()) {
+      M.toast({ html: "Register Success" });
+      setTimeout(() => (document.location = "/login.html"), 2000);
+    } else {
+      M.toast({ html: "Check again the form" });
+    }
   });
   passwordField.keyup(function () {
     checkPasswordStregth($(this).val());
