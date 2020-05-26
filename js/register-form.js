@@ -1,4 +1,4 @@
-const onGapiLoad = function () {
+const gapiHandler = function () {
   console.log("gapi loaded ... ");
   gapi.load("auth2", function () {
     auth2 = gapi.auth2.init({
