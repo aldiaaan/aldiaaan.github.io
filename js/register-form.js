@@ -259,6 +259,25 @@ const renderPhoneCodes = () => {
   });
   $("select").formSelect();
 };
+const strengthIndicator = $("#strength-indicator");
+const checkPasswordStregth = (password) => {
+  var strength = 1;
+  var factor = [/.{8,}/, /[a-z]+/, /[0-9]+/, /[A-Z]+/, /[^\w\s]/];
+  $.map(factor, function (regex) {
+    if (password.match(regex)) strength++;
+  });
+  if (strength <= 3) {
+    strengthIndicator.text("weak");
+    strengthIndicator.css("color", "#e53e3e");
+  } else if (strength > 3 && strength <= 4) {
+    strengthIndicator.css("color", "#d69e2e");
+    strengthIndicator.text("medium");
+  } else if (strength >= 5) {
+    strengthIndicator.css("color", "#38a169");
+    strengthIndicator.text("high");
+  }
+  return strength;
+};
 const checkFormInput = () => {
   let DOMNodes = {
     fullname: $("#fullname"),
@@ -404,6 +423,16 @@ const checkFormInput = () => {
       .attr("data-error", "Invalid phone number format");
     flag = false;
   }
+  if (checkPasswordStregth(DOMNodes.password.val()) <= 3) {
+    DOMNodes.password
+      .addClass("invalid")
+      .next()
+      .next()
+      .next()
+      .next()
+      .attr("data-error", "Weak password");
+    flag = false;
+  }
   console.log(flag);
   return flag;
 };
@@ -435,24 +464,7 @@ $(document).ready(function () {
   const passwordShowed = $("#password-showed");
   const passwordUnshowed = $("#password-unshowed");
   const passwordField = $("#password");
-  const strengthIndicator = $("#strength-indicator");
-  const checkPasswordStregth = (password) => {
-    var strength = 1;
-    var factor = [/.{8,}/, /[a-z]+/, /[0-9]+/, /[A-Z]+/, /[^\w\s]/];
-    $.map(factor, function (regex) {
-      if (password.match(regex)) strength++;
-    });
-    if (strength <= 2) {
-      strengthIndicator.text("low");
-      strengthIndicator.css("color", "#e53e3e");
-    } else if (strength > 2 && strength <= 4) {
-      strengthIndicator.css("color", "#d69e2e");
-      strengthIndicator.text("medium");
-    } else if (strength >= 5) {
-      strengthIndicator.css("color", "#38a169");
-      strengthIndicator.text("high");
-    }
-  };
+
   $(".register-btn").on("click", function () {
     checkFormInput();
   });
