@@ -1,4 +1,5 @@
 const onGapiLoad = function () {
+  console.log("gapi loaded ... ");
   gapi.load("auth2", function () {
     auth2 = gapi.auth2.init({
       client_id:
