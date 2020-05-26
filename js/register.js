@@ -1,8 +1,5 @@
 function renderButton() {
   console.log("callback called");
-  console.log(
-    "User signed in " + gapi.auth2.getAuthInstance().isSignedIn.get()
-  );
   gapi.load("auth2", function () {
     auth2 = gapi.auth2.init({
       client_id:
@@ -20,6 +17,9 @@ function renderButton() {
       function (error) {
         console.log("Sign-in error", error);
       }
+    );
+    console.log(
+      "User signed in " + gapi.auth2.getAuthInstance().isSignedIn.get()
     );
   });
 
