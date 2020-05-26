@@ -19,7 +19,9 @@ function renderButton() {
     );
     auth2.then(function () {
       auth2 = gapi.auth2.getAuthInstance();
-      console.log(auth2.isSignedIn.get());
+      if (auth2.isSignedIn.get()) {
+        document.location = "/register-form.html";
+      }
     });
   });
 
