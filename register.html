@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-client_id"
+    content="854323361392-72p61h583mihiamd35d87lhrl3nu2nu3.apps.googleusercontent.com>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -17,6 +19,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link rel="stylesheet" href="css/register.css" />
     <title>Register</title>
   </head>
@@ -26,6 +29,7 @@
       <div class="divider"></div>
       <div class="row" style="margin-top: 1rem; padding: 0.5rem 0;">
         <p class="sub-title">You need to connect your account first</p>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <a href="#" class="sso-btn"
           ><svg width="16" height="16" viewBox="0 0 16 16">
             <defs>
@@ -166,5 +170,6 @@
         </p>
       </div>
     </div>
+    <script src="js/register.js"></script>
   </body>
 </html>
