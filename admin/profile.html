@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="../css/account.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <title>Account</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <div class="container">
+            <div class="flexbox items-center">
+              <a href="/admin.html" class="logo"
+                ><svg viewBox="0 0 478 840" class="blue-text">
+                  <polygon
+                    fill="currentColor"
+                    points="344 629 446 520 411 521 478 425 425 447 457 386 456 273 427 292 425 157 400 182 261 3 261 317 326 438 285 512 239 472 239 469 193 509 152 435 217 314 217 0 78 179 53 154 51 289 22 270 21 383 53 444 0 422 67 518 32 517 134 626 179 626 204 667 118 746 158 747 143 796 196 769 196 795 239 837 239 840 282 798 282 772 335 799 320 750 360 749 274 670 299 629 344 629"
+                  />
+                </svg>
+                &nbsp;&nbsp;Admin Dashboard /
+                <span style="color: #718096;">Account</span>
+              </a>
+              <div class="profile-wrapper flexbox items-center">
+                <a
+                  class="waves-circle waves-effect flexbox items-center nav-icon"
+                  href="javascript:void(0)"
+                  style="
+                    justify-content: center;
+                    margin-right: 0.25rem;
+                    flex-wrap: nowrap;
+                    position: relative;
+                  "
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    fill="rgba(32, 33, 36, 0.7)"
+                  >
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path
+                      d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="waves-circle waves-effect flexbox items-center"
+                  href="javascript:void(0)"
+                  style="
+                    justify-content: center;
+                    margin-right: 0.75rem;
+                    flex-wrap: nowrap;
+                  "
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    width="22"
+                    fill="rgba(32, 33, 36, 0.7)"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"
+                    />
+                  </svg>
+                </a>
+                <div class="profile-wrapper">
+                  <img
+                    src="http://127.0.0.1:5500/imgs/profile-1.jpg"
+                    id="profile-picture"
+                    data-target="profile_dropdown"
+                  />
+                  <div class="profile-dropdown" id="profile_dropdown">
+                    <div
+                      class="flexbox profile-dropdown-item"
+                      style="
+                        align-items: flex-start;
+                        background-color: #fff !important;
+                      "
+                    >
+                      <img
+                        src="http://127.0.0.1:5500/imgs/profile-1.jpg"
+                        id="profile-picture"
+                        style="margin-right: 0.75rem;"
+                      />
+                      <div class="flexbox flex-grow">
+                        <p style="margin-bottom: 0.25rem;">
+                          Aldian
+                          <span
+                            class="bullet bullet-indigo"
+                            style="margin-left: 0.125rem;"
+                            >PLATINUM</span
+                          >
+                        </p>
+                        <div class="progress">
+                          <div class="determinate" style="width: 70%;"></div>
+                        </div>
+                        <div class="flexbox items-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="#f6e05e"
+                            style="margin: -4px;"
+                          >
+                            <path
+                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"
+                            />
+                          </svg>
+                          <p style="margin-left: 0.5rem; font-weight: 500;">
+                            20000
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divider"></div>
+                    <a
+                      href="#"
+                      class="profile-dropdown-item flexbox items-center"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        enable-background="new 0 0 24 24"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        width="18"
+                      >
+                        <g>
+                          <path d="M0,0h24v24H0V0z" fill="none" />
+                          <path
+                            d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"
+                          />
+                        </g>
+                      </svg>
+                      Setting
+                    </a>
+                    <a
+                      href="#"
+                      class="profile-dropdown-item flexbox items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        width="18"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                        />
+                        <path d="M0 0h24v24H0z" fill="none" />
+                      </svg>
+                      Account
+                    </a>
+                    <a
+                      href="#"
+                      class="profile-dropdown-item flexbox items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        width="18"
+                        fill="currentColor"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"
+                        />
+                      </svg>
+                      Withdraw
+                    </a>
+                    <a
+                      href="#"
+                      class="profile-dropdown-item flexbox items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        width="18"
+                        fill="currentColor"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      Logout
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col s10 offset-s1">
+            <p class="title">Profile</p>
+            <div class="divider" style="margin-bottom: 1.5rem;"></div>
+            <div class="row">
+              <div class="col s12 l8" style="padding-right: 1rem;">
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input
+                        placeholder="Fullname"
+                        spellcheck="false"
+                        id="fullname"
+                        type="text"
+                        class="validate"
+                        value="Aldian"
+                      />
+                      <label for="fullname">Fullname</label>
+                      <span
+                          class="helper-text"
+                          data-error=""
+                          data-success=""
+                        ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input
+                        id="birthdate"
+                        spellcheck="false"
+                        type="text"
+                        value="May 10, 2020"
+                        placeholder="Birthdate"
+                        class="validate datepicker"
+                        type="text"
+                      />
+                      <label for="birthdate">Birthdate</label>
+                      <span
+                          class="helper-text"
+                          data-error=""
+                          data-success=""
+                        ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input
+                        spellcheck="false"
+                        placeholder="Codename"
+                        id="codename"
+                        value="Styx"
+                        type="text"
+                        class="validate"
+                      />
+                      <label for="codename">Codename</label>
+                      <span
+                          class="helper-text"
+                          data-error=""
+                          data-success=""
+                        ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <div
+                      class="input-field"
+                      style="padding-right: 2rem; position: relative;"
+                    >
+                      <input
+                        placeholder="Password"
+                        id="password"
+                        type="password"
+                        value="Aldian99#"
+                        spellcheck="false"
+                        class="validate"
+                        style="margin-right: -30px; padding-right: 2rem;"
+                      />
+                      <svg
+                        fill="#9e9e9e"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="https://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="
+                          position: absolute;
+                          right: 0;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          cursor: pointer;
+                        "
+                        id="password-showed"
+                      >
+                        <path
+                          d="M12,7c-2.48,0-4.5,2.02-4.5,4.5S9.52,16,12,16s4.5-2.02,4.5-4.5S14.48,7,12,7z M12,14.2c-1.49,0-2.7-1.21-2.7-2.7 c0-1.49,1.21-2.7,2.7-2.7s2.7,1.21,2.7,2.7C14.7,12.99,13.49,14.2,12,14.2z"
+                        ></path>
+                        <path
+                          d="M12,4C7,4,2.73,7.11,1,11.5C2.73,15.89,7,19,12,19s9.27-3.11,11-7.5C21.27,7.11,17,4,12,4z M12,17 c-3.79,0-7.17-2.13-8.82-5.5C4.83,8.13,8.21,6,12,6s7.17,2.13,8.82,5.5C19.17,14.87,15.79,17,12,17z"
+                        ></path>
+                        <path fill="none" d="M0,0h24v24H0V0z"></path>
+                      </svg>
+                      <svg
+                        fill="#9e9e9e"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="https://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                        focusable="false"
+                        id="password-unshowed"
+                        style="
+                          position: absolute;
+                          right: 0;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          cursor: pointer;
+                        "
+                      >
+                        <path
+                          d="M10.58,7.25l1.56,1.56c1.38,0.07,2.47,1.17,2.54,2.54l1.56,1.56C16.4,12.47,16.5,12,16.5,11.5C16.5,9.02,14.48,7,12,7 C11.5,7,11.03,7.1,10.58,7.25z"
+                        ></path>
+                        <path
+                          d="M12,6c3.79,0,7.17,2.13,8.82,5.5c-0.64,1.32-1.56,2.44-2.66,3.33l1.42,1.42c1.51-1.26,2.7-2.89,3.43-4.74 C21.27,7.11,17,4,12,4c-1.4,0-2.73,0.25-3.98,0.7L9.63,6.3C10.4,6.12,11.19,6,12,6z"
+                        ></path>
+                        <path
+                          d="M16.43,15.93l-1.25-1.25l-1.27-1.27l-3.82-3.82L8.82,8.32L7.57,7.07L6.09,5.59L3.31,2.81L1.89,4.22l2.53,2.53 C2.92,8.02,1.73,9.64,1,11.5C2.73,15.89,7,19,12,19c1.4,0,2.73-0.25,3.98-0.7l4.3,4.3l1.41-1.41l-3.78-3.78L16.43,15.93z M11.86,14.19c-1.38-0.07-2.47-1.17-2.54-2.54L11.86,14.19z M12,17c-3.79,0-7.17-2.13-8.82-5.5c0.64-1.32,1.56-2.44,2.66-3.33 l1.91,1.91C7.6,10.53,7.5,11,7.5,11.5c0,2.48,2.02,4.5,4.5,4.5c0.5,0,0.97-0.1,1.42-0.25l0.95,0.95C13.6,16.88,12.81,17,12,17z"
+                        ></path>
+                      </svg>
+                      <label for="password"
+                        >Password &nbsp;&nbsp;
+                        <p id="strength-indicator" style="display: none;">
+                          medium
+                        </p></label
+                      >
+                      <span
+                          class="helper-text"
+                          data-error=""
+                          data-success=""
+                        ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input
+                        placeholder="NIK"
+                        id="nik"
+                        type="text"
+                        class="validate"
+                        value="10 50 24 170890 0001"
+                        spellcheck="false"
+                        disabled
+                      />
+                      <label for="nik">NIK</label>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input
+                        placeholder="Email"
+                        id="email"
+                        value="aldian22@gmail.com"
+                        type="text"
+                        class="validate"
+                        spellcheck="false"
+                      />
+                      <label for="email">Email</label>
+                      <span
+                          class="helper-text"
+                          data-error=""
+                          data-success=""
+                        ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input
+                        spellcheck="false"
+                        placeholder="Address"
+                        id="address"
+                        type="text"
+                        class="validate"
+                        value="Jl. R.Mangun Muka Raya, RT.11/RW.14, Rawamangun, Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13220"
+                      />
+                      <label for="address">Address</label>
+                      <span
+                          class="helper-text"
+                          data-error=""
+                          data-success=""
+                        ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input
+                        placeholder="Profession"
+                        id="profession"
+                        type="text"
+                        class="validate"
+                        value="Warlock"
+                        spellcheck="false"
+                      />
+                      <label for="profession">Profession</label>
+                      <span
+                          class="helper-text"
+                          data-error=""
+                          data-success=""
+                        ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <textarea
+                        cols="4"
+                        id="skillset"
+                        class="materialize-textarea validate"
+                        placeholder="Skillset                        
+                        spellcheck="false"
+                      >Dual Cast</textarea>
+                      <label for="skillset" id="skillset">Skillset</label>
+                      <span
+                          class="helper-text"
+                          data-error=""
+                          data-success=""
+                        ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field" id="dropdown-form">
+                      <select class="validate" disabled>
+                        <option value="civilian">Civilian</option>
+                        <option value="guild-member">Guild Member</option>
+                        <option value="manager" selected>Manager</option>
+                      </select>
+                      <label for="member-type">Member Type</label>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field" id="dropdown-form">
+                      <select class="validate" disabled >
+                        <option value="1">1 Month</option>
+                        <option value="3">3 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="12">12 Months</option>
+                      </select>
+                      <label for="join-period">Join Period</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 l4">
+                <p class="c-label">Profile Picture</p>
+                <div class="preview">
+                  <img
+                    src="http://127.0.0.1:5500/imgs/profile-1.jpg"
+                    class="responsive-img profile-preview"
+                    data-target="profile_dropdown"
+                  />
+                  <div class="edit-btn flexbox items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      fill="currentColor"
+                      style="margin-right: 0.375rem;"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                      <path d="M0 0h24v24H0z" fill="none" />
+                    </svg>
+                    <p>Edit</p>
+                  </div>
+                </div>
+                <p class="member-profession" style="margin-top: .5rem;">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill=" #718096"
+                    width="18px"
+                    height="18px"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                    />
+                  </svg>
+                  Warlock
+                  &nbsp;
+                  <span class="bullet bullet-indigo">PLATINUM</span>
+                </p>
+                <div class="progress" style="margin-bottom: 0!important;">
+                  <div class="determinate" style="width: 70%;"></div>                                    
+                </div>
+                <p class="exp">44000/999200000</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col s10 offset-s1">
+            <div class="row">
+              <div class="col s12 l8">
+                <a href="#" class="btn right" id="save-profile" background-color: #1a73e8;>Save Profile</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/admin-profile.js">
+      
+    </script>
+  </body>
+</html>

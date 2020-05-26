@@ -7,157 +7,164 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <link rel="stylesheet" type="text/css" href="./main.css" />
-    <link rel="stylesheet" type="text/css" href="./register.css" />
+    <link rel="stylesheet" href="css/register.css" />
     <title>Register</title>
   </head>
   <body>
-    <main>
-      <section id="register">
-        <div id="register-form" class="row">
-          <div class="col offset-l2 l8 s12">
-            <div class="card grey darken-4">
-              <div class="card-content">
-                <div class="title-container">
-                  <svg viewBox="0 0 478 840" class="logo white-text">
-                    <polygon
-                      fill="currentColor"
-                      points="344 629 446 520 411 521 478 425 425 447 457 386 456 273 427 292 425 157 400 182 261 3 261 317 326 438 285 512 239 472 239 469 193 509 152 435 217 314 217 0 78 179 53 154 51 289 22 270 21 383 53 444 0 422 67 518 32 517 134 626 179 626 204 667 118 746 158 747 143 796 196 769 196 795 239 837 239 840 282 798 282 772 335 799 320 750 360 749 274 670 299 629 344 629"
-                    />
-                  </svg>
-                  <div class="title">
-                    <p class="white-text">Aisenfield Guild</p>
-                    <p class="grey-text" style="font-size: 0.857rem;">
-                      Registration Form
-                    </p>
-                  </div>
-                </div>
-
-                <form autocomplete="off">
-                  <div class="row">
-                    <div class="col s12 l6">
-                      <div class="input-field col s12">
-                        <input
-                          placeholder="Fullname"
-                          id="fullname"
-                          type="text"
-                          class="validate white-text"
-                        />
-                        <label for="fullname">Fullname</label>
-                      </div>
-                      <div class="input-field col s12">
-                        <input
-                          placeholder="Profession"
-                          id="profession"
-                          type="text"
-                          class="validate white-text"
-                        />
-                        <label for="profession">Profession</label>
-                      </div>
-                      <div class="input-field col s12">
-                        <input
-                          placeholder="NIK"
-                          id="nik"
-                          type="text"
-                          class="validate white-text"
-                        />
-                        <label for="nik">NIK</label>
-                      </div>
-                      <div class="col s12">
-                        <div class="row" style="margin-bottom: 0px;">
-                          <div class="input-field col s8" id="dropdown-form">
-                            <select class="validate">
-                              <option value="1">1 Month</option>
-                              <option value="3">3 Months</option>
-                              <option value="6">6 Months</option>
-                              <option value="12">12 Months</option>
-                            </select>
-                            <label for="join-period">Join Period</label>
-                          </div>
-                          <div class="input-field col s4">
-                            <input
-                              id="birthdate"
-                              type="text"
-                              placeholder="Birthdate"
-                              class="validate datepicker white-text"
-                              type="text"
-                            />
-                            <label for="birthdate">Birthdate</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col s12 l6">
-                      <div class="input-field col s12">
-                        <input
-                          placeholder="Codename"
-                          id="codename"
-                          type="text"
-                          class="validate white-text"
-                        />
-                        <label for="address">Codename</label>
-                      </div>
-
-                      <div class="input-field col s12">
-                        <input
-                          placeholder="Address"
-                          id="address"
-                          type="text"
-                          class="validate white-text"
-                        />
-                        <label for="address">Address</label>
-                      </div>
-                      <div class="input-field col s12" id="dropdown-form">
-                        <select class="validate">
-                          <option value="civilian">Civilian</option>
-                          <option value="guild-member">Guild Member</option>
-                        </select>
-                        <label for="member-type">Member Type</label>
-                      </div>
-                      <div class="input-field col s12">
-                        <textarea
-                          cols="4"
-                          id="textarea1"
-                          class="materialize-textarea validate white-text"
-                          placeholder="Skillset"
-                        ></textarea>
-                        <label for="skillset" id="skillset">Skillset</label>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="card-action right-align">
-                <a href="#" class="btn orange">REGISTER</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    <div class="register-container">
+      <p class="title">Create An Account (it's free!)</p>
+      <div class="divider"></div>
+      <div class="row" style="margin-top: 1rem; padding: 0.5rem 0;">
+        <p class="sub-title">You need to connect your account first</p>
+        <a href="#" class="sso-btn"
+          ><svg width="16" height="16" viewBox="0 0 16 16">
+            <defs>
+              <path
+                d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z"
+                id="id-8a"
+              ></path>
+              <path
+                d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z"
+                id="id-10c"
+              ></path>
+              <path
+                d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z"
+                id="id-12e"
+              ></path>
+              <path
+                d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z"
+                id="id-14g"
+              ></path>
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+              <g transform="translate(.08 .07)">
+                <mask id="id-9b" fill="#fff">
+                  <use xlink:href="#id-8a"></use>
+                </mask>
+                <path
+                  fill="#FBBC05"
+                  fill-rule="nonzero"
+                  mask="url(#id-9b)"
+                  d="M-.72 12.616V3.244L5.406 7.93z"
+                ></path>
+              </g>
+              <g transform="translate(.08 .07)">
+                <mask id="id-11d" fill="#fff">
+                  <use xlink:href="#id-10c"></use>
+                </mask>
+                <path
+                  fill="#EA4335"
+                  fill-rule="nonzero"
+                  mask="url(#id-11d)"
+                  d="M-.72 3.244L5.406 7.93 7.93 5.731l8.651-1.405V-.721H-.72z"
+                ></path>
+              </g>
+              <g transform="translate(.08 .07)">
+                <mask id="id-13f" fill="#fff">
+                  <use xlink:href="#id-12e"></use>
+                </mask>
+                <path
+                  fill="#34A853"
+                  fill-rule="nonzero"
+                  mask="url(#id-13f)"
+                  d="M-.72 12.616l10.813-8.29 2.848.36 3.64-5.407v17.302H-.72z"
+                ></path>
+              </g>
+              <g transform="translate(.08 .07)">
+                <mask id="id-15h" fill="#fff">
+                  <use xlink:href="#id-14g"></use>
+                </mask>
+                <path
+                  fill="#4285F4"
+                  fill-rule="nonzero"
+                  mask="url(#id-15h)"
+                  d="M16.581 16.581L5.407 7.931 3.965 6.848l12.616-3.605z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+          Google
+        </a>
+        <a href="#" class="sso-btn"
+          ><svg width="16" height="16" viewBox="0 0 24 24">
+            <g fill-rule="nonzero" fill="none">
+              <path
+                d="M22.618 23.936c.727 0 1.318-.59 1.318-1.318V1.373c0-.729-.59-1.319-1.318-1.319H1.373C.644.054.054.644.054 1.373v21.245c0 .728.59 1.318 1.319 1.318h21.245z"
+                fill="#3C5A99"
+              ></path>
+              <path
+                d="M16.532 23.936v-9.248h3.104l.465-3.605h-3.569v-2.3c0-1.044.29-1.755 1.786-1.755l1.909-.001V3.803c-.33-.044-1.463-.142-2.781-.142-2.752 0-4.636 1.68-4.636 4.764v2.658H9.698v3.605h3.112v9.248h3.722z"
+                fill="#FFF"
+              ></path>
+            </g>
+          </svg>
+          Facebook
+        </a>
+        <a href="#" class="sso-btn">
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m8.2896 20c7.5472 0 11.6752-6.1562 11.6752-11.49475 0-.17486 0-.34892-.012-.5222.8031-.5719 1.4963-1.28 2.0472-2.09117-.7489.32671-1.5433.54097-2.3568.63562.8566-.50489 1.4977-1.29899 1.804-2.23452-.8055.47057-1.6867.80221-2.6056.9806-1.2719-1.33158-3.293-1.65749-4.93-.79497-1.6369.86251-2.4826 2.69894-2.0628 4.47953-3.29928-.16284-6.37322-1.6971-8.4568-4.22094-1.0891 1.84594-.53281 4.20744 1.2704 5.3929-.65301-.019-1.29178-.19245-1.8624-.50562v.0512c.00053 1.92312 1.3774 3.57942 3.292 3.96022-.6041.1622-1.23794.1859-1.8528.0693.53756 1.6457 2.07806 2.7731 3.8336 2.8056-1.45301 1.1243-3.24795 1.7346-5.096 1.7328-.32648-.0006-.65264-.0201-.9768-.0583 1.87651 1.1856 4.05993 1.8145 6.2896 1.8115"
+              fill="#1da1f2"
+            />
+          </svg>
+          Twitter
+        </a>
+        <a href="#" class="sso-btn"
+          ><svg
+            fill="#24292e"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 50"
+            width="16"
+            height="16"
+          >
+            <path
+              d="M 33 29 C 31.203125 29 30 30.515625 30 33 C 30 35.484375 30.890625 38.046875 33 38 C 35.21875 37.949219 36.019531 35.777344 36 33 C 35.984375 30.515625 34.792969 29 33 29 Z M 44.261719 17.066406 C 44.535156 15.722656 44.652344 10.964844 42.679688 6 C 42.679688 6 38.148438 6.496094 31.296875 11.199219 C 29.863281 10.800781 27.429688 10.601563 25 10.601563 C 22.570313 10.601563 20.140625 10.800781 18.699219 11.195313 C 11.851563 6.496094 7.324219 6 7.324219 6 C 5.347656 10.964844 5.445313 15.609375 5.738281 17.066406 C 3.417969 19.585938 2 22.609375 2 26.742188 C 2 44.707031 16.90625 44.996094 20.667969 44.996094 C 21.519531 44.996094 23.210938 44.996094 25 45 C 26.789063 44.996094 28.484375 44.996094 29.332031 44.996094 C 33.09375 44.996094 48 44.707031 48 26.742188 C 48 22.609375 46.582031 19.585938 44.261719 17.066406 Z M 25.140625 43 L 25 43 C 15.570313 43 8.15625 41.660156 8.15625 32.496094 C 8.15625 30.300781 8.933594 28.265625 10.773438 26.574219 C 13.84375 23.753906 19.035156 25.246094 24.929688 25.246094 C 24.953125 25.246094 25.050781 25.246094 25.070313 25.246094 C 30.964844 25.246094 36.160156 23.757813 39.230469 26.574219 C 41.070313 28.265625 41.84375 30.300781 41.84375 32.496094 C 41.84375 41.660156 34.570313 43 25.140625 43 Z M 17 29 C 15.207031 29 14 31.015625 14 33.5 C 14 35.984375 15.207031 38 17 38 C 18.796875 38 20 35.984375 20 33.5 C 20 31.015625 18.796875 29 17 29 Z"
+            ></path>
+          </svg>
+          Github
+        </a>
+        <a href="#" class="sso-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="rgb(0, 119, 183)"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+            />
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+      <div class="divider"></div>
+      <div class="row" style="margin-top: 1rem;">
+        <p class="tos">
+          By creating an account, you agree to Aisenfield Guilds's
+          <span class="link-span">Terms of Service, Cookie Policy</span> and
+          <span class="link-span"> Privacy Policy</span>. You consent to
+          receiving marketing messages from Aisenfield Guild and may opt out
+          from receiving such messages by following the unsubscribe link in our
+          messages, or as detailed in our terms.
+        </p>
+      </div>
+    </div>
   </body>
-  <script>
-    const getCookieByName = (name, cb) => {
-      document.cookie.split(";").map((data) => {
-        [key, value] = data.split("=");
-        if (name === key.trim()) {
-          cb(value);
-        }
-      });
-    };
-    $(document).ready(function () {
-      $("select").formSelect();
-      $(".datepicker").datepicker();
-      const DOMNodes = {
-        fullname: document.getElementById("fullname"),
-      };
-      getCookieByName(
-        "fullname",
-        (fullname) => (DOMNodes.fullname.value = fullname)
-      );
-    });
-  </script>
 </html>

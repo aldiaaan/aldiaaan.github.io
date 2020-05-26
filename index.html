@@ -3,343 +3,499 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./main.css" />
-    <link rel="stylesheet" type="text/css" href="./index.css" />
-    <title>Aisenfield Guild</title>
-  </head>
-  <body class="grey darken-4">
-    <main>
-      <ul id="mobile-demo" class="sidenav grey darken-4 ">
-        <li><a href="#contact" class="white-text">Contact</a></li>
-        <li><a href="/quiz.html">Dev Info</a></li>
-        <li><a href="#news" class="white-text">News</a></li>
-        <li><a href="#about-us" class="white-text">About Us</a></li>
-        <li><a href="/login.html" class="white-text">Login</a></li>
-      </ul>
-      <header>
-        <nav class="grey darken-4">
-          <div class="nav-wrapper container">
-            <a href="#" class="brand-wrapper">
-              <svg
-                xmlns="http://www.w3.org/3000/svg"
-                viewBox="0 0 478 840"
-                class="logo white-text"
-              >
-                <polygon
-                  class="s-1"
-                  fill="currentColor"
-                  points="344 629 446 520 411 521 478 425 425 447 457 386 456 273 427 292 425 157 400 182 261 3 261 317 326 438 285 512 239 472 239 469 193 509 152 435 217 314 217 0 78 179 53 154 51 289 22 270 21 383 53 444 0 422 67 518 32 517 134 626 179 626 204 667 118 746 158 747 143 796 196 769 196 795 239 837 239 840 282 798 282 772 335 799 320 750 360 749 274 670 299 629 344 629"
-                />
-              </svg>
-              <p style="margin-left: 1rem;">Aisenfield Guild</p>
-            </a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
-              ><i class="material-icons">menu</i></a
-            >
-            <ul class="hide-on-med-and-down right">
-              <li><a href="/quiz.html">Dev Info</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#news">News</a></li>
-              <li><a href="#about-us">About Us</a></li>
-              <li><a href="/login.html">Login</a></li>
-              
-            </ul>
-          </div>
-        </nav>
-      </header>
 
-      <section id="main">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 l8 xl6 hero">
-              <p class="motto">
-                Together We Are <span class="highlighted-text">Stronger</span>
-              </p>
-              <p class="description grey-text text-lighten-1">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas molestias excepturi sint occaecati cupiditate
-                non provident, similique sunt in culpa qui officia deserunt
-                mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                rerum facilis est et expedita distinctio. Nam libero tempore,
-                cum soluta nobis est eligendi optio cumque nihil impedit quo
-                minus id quod maxime placeat facere possimus, omnis voluptas
-                assumenda est, omnis dolor repellendus.
-              </p>
-              <a
-                href="/login.html"
-                class="waves-effect btn-flat register-btn white-text"
-                >REGISTER NOW</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="about-us" class="valign-wrapper">
-        <div class="about-us-cover">
-          <div class="background-grey"></div>
-          <div class="winner-image"></div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col s12 l6">
-              <p class="white-text header-title">About Us</p>
-              <p class="grey-text text-lighten-1" style="position: relative;">Aisenfield adalah guild Counter Strike: Global Offensive terbesar di Indonesia. Aisenfield didirikan pada tahun 2016. Sampai sekarang, Aisenfield telah sukses dalam memenangkan perlombaan di berbagai tingkat di luar negeri maupun di dalam negeri. Ini membuktikan bahwa Aisenfield adalah guild Counter Strike: Global Offensive terbesar di Indonesia dengan anggota yang sudah terdaftar mencapai 500 orang. </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="news">
-        <div class="container">
-          <div class="row">
-            <div class="col s12">
-              <p class="white-text header-title">News</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="carousel carousel-slider hide-left" id="news">
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-6.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  The International 2020 postponed
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-1.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  Hellcase Cup #8: Aisenfield Junior in group D
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-2.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  Aisenfield Guild to play at in AXL Invitational
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-3.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  Aisenfield Guild at ALGS #5 Online Final
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-4.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  Quake Pro League Stage 3: versus Spart1e
-                </p>
-              </div>              
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-5.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  HellCase Cup 8 Open Qualifiers
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-6.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  The International 2020 postponed
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-1.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  Hellcase Cup #8: Aisenfield Junior in group D
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-7.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  PSL Season 6: Stage 4 start
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-4.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  Quake Pro League Stage 3: versus Spart1e
-                </p>
-              </div> 
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-8.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  Home Sweet Home Cup #4 open qualifier
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-9.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  Aisenfield Guild invited to PCS: Charity Showdown
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-6.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  The International 2020 postponed
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-1.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  Hellcase Cup #8: Aisenfield Junior in group D
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-2.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  Aisenfield Guild to play at in AXL Invitational
-                </p>
-              </div>
-              <div class="slide-component news-card carousel-item">
-                <img src="assets/news-3.jpg" class="news-image" />
-                <p class="white-text slide-component-title">
-                  Aisenfield Guild at ALGS #5 Online Final
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col s12">
-              <p class="white-text header-title">Live Stream</p>
-            </div>
-          </div>
-          <div class="row"><div class="carousel carousel-slider hide-left" id="live-stream">
-            <div class="slide-component stream-card carousel-item">
-              <img src="assets/stream-1.jpg" class="stream-image"/>
-              <p class="white-text slide-component-title">
-                <svg  width="12" height="12" fill="#ea0001" viewBox="0 0 24 24"><path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2z"/></svg>
-                Stream for Charity 2
-              </p>
-            </div>
-            <div class="slide-component stream-card carousel-item">
-              <img src="assets/stream-2.jpg" class="stream-image"/>
-              <p class="white-text slide-component-title">
-                <svg  width="12" height="12" fill="#ea0001" viewBox="0 0 24 24"><path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2z"/></svg>
-                Stream for Charity 2
-              </p>
-            </div>
-            <div class="slide-component stream-card carousel-item">
-              <img src="assets/stream-3.jpg" class="stream-image"/>
-              <p class="white-text slide-component-title">
-                <svg  width="12" height="12" fill="#ea0001" viewBox="0 0 24 24"><path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2z"/></svg>
-                Stream for Charity 2
-              </p>
-            </div>
-            <div class="slide-component stream-card carousel-item">
-              <img src="assets/stream-4.jpg" class="stream-image"/>
-              <p class="white-text slide-component-title">
-                <svg  width="12" height="12" fill="#ea0001" viewBox="0 0 24 24"><path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2z"/></svg>
-                Stream for Charity 2
-              </p>
-            </div>
-            <div class="slide-component stream-card carousel-item">
-              <img src="assets/stream-5.jpg" class="stream-image"/>
-              <p class="white-text slide-component-title">
-                <svg  width="12" height="12" fill="#ea0001" viewBox="0 0 24 24"><path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2z"/></svg>
-                Stream for Charity 2
-              </p>
-            </div>
-            <div class="slide-component stream-card carousel-item">
-              <img src="assets/stream-6.jpg" class="stream-image"/>
-              <p class="white-text slide-component-title">
-                <svg  width="12" height="12" fill="#ea0001" viewBox="0 0 24 24"><path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2z"/></svg>
-                Stream for Charity 2
-              </p>
-            </div>
-            <div class="slide-component stream-card carousel-item">
-              <img src="assets/stream-7.jpg" class="stream-image"/>
-              <p class="white-text slide-component-title">
-                <svg  width="12" height="12" fill="#ea0001" viewBox="0 0 24 24"><path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2z"/></svg>
-                Stream for Charity 2
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer id="contact" class="page-footer" style="background-color: #1b1b1b; padding-top: 2rem;">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 m9" style="margin-bottom: 1rem;">
-              <div class="title-container">
-                <svg viewBox="0 0 478 840" class="logo white-text">
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Aisenfield</title>
+  </head>
+  <body>
+    <header>
+      <ul id="slide-out" class="sidenav">
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/review.html">Review</a></li>
+        <li><a href="/login.html">Login</a></li>
+        <li><a href="/admin.html">Admin</a></li>
+      </ul>
+      <nav>
+        <div class="nav-wrapper">
+          <div class="container">
+            <div class="flexbox items-center">
+              <a href="#!" class="logo flex-1"
+                ><svg viewBox="0 0 478 840" class="blue-text">
                   <polygon
                     fill="currentColor"
                     points="344 629 446 520 411 521 478 425 425 447 457 386 456 273 427 292 425 157 400 182 261 3 261 317 326 438 285 512 239 472 239 469 193 509 152 435 217 314 217 0 78 179 53 154 51 289 22 270 21 383 53 444 0 422 67 518 32 517 134 626 179 626 204 667 118 746 158 747 143 796 196 769 196 795 239 837 239 840 282 798 282 772 335 799 320 750 360 749 274 670 299 629 344 629"
                   />
                 </svg>
-                <div class="title">
-                  <p>Aisenfield Guild</p>
-                  <p class="grey-text" style="font-size: 0.857rem;">
-                    Rawamangun, Kec. Pulo Gadung, Kota Jakarta Timur, DKI Jakarta 13220, Telp. +628211145002
+                &nbsp;&nbsp;Aisenfield
+              </a>
+              <ul id="nav-mobile" class="hide-on-med-and-down">
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/review.html">Review</a></li>
+                <li><a href="/login.html">Login</a></li>
+                <li><a href="/admin.html">Admin</a></li>
+              </ul>
+              <a
+                href="#"
+                class="flexbox items-center justify-center sidenav-trigger"
+                id="burger"
+                data-target="slide-out"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="hero" class="flexbox items-center">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 l6">
+              <p class="hero-title">Together We Are Stronger</p>
+              <p class="hero-description">
+                Aisenfield adalah platform digital yang membantu anda dalam
+                menemukan pekerja dengan pemberi kerja. Et harum quidem rerum
+                facilis est et expedita distinctio. Nam libero tempore, cum
+                soluta nobis est eligendi optio cumque nihil impedit quo minus
+                id quod maxime placeat facere possimus, omnis voluptas assumenda
+                est, omnis dolor repellendus.
+              </p>
+              <a href="/register.html" class="cta-register">REGISTER NOW</a>
+            </div>
+            <img
+              src="http://127.0.0.1:5500/imgs/guild-hq.png"
+              alt=""
+              class="hero-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="why-join" class="flexbox">
+        <div class="container section-pad">
+          <p class="section-title">Why Join With Us?</p>
+          <p class="section-description">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores et quas molestias excepturi sint occaecati cupiditate non
+            provident,
+          </p>
+          <div class="row" style="margin-top: 4rem;">
+            <div class="col s12 l4 step">
+              <div class="flexbox">
+                <div style="flex-shrink: 0;">
+                  <span class="index-circle">1</span>
+                </div>
+                <div class="flexbox flex-column">
+                  <p class="step-title">
+                    Necessitatibus saepe eveniet ut et voluptates
+                  </p>
+                  <p class="step-description">
+                    accusantium doloremque laudantium, totam rem aperiam, eaque
+                    ipsa quae ab illo inventore veritatis et quasi architecto
+                    beatae vitae dicta sunt explicabo.
                   </p>
                 </div>
-              </div>              
-            </div> 
-            <div class="col s12 m3 right-align">
-              <div class="social-btn-groups" style="display: flex; justify-content: space-evenly; align-items: center;">
-                <svg fill="#fff" xmlns="http://www.w3.org/3000/svg" viewBox="0 0 32 32" width="32px" height="32px"><path d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"/></svg>
-                <svg
-                  fill="#fff"
-                  xmlns="http://www.w3.org/3000/svg"
-                  viewBox="0 0 50 50"
-                  width="28px"
-                  height="28px"                        
-                >
-                  <path
-                    d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"
-                  />
-                </svg>
-                <svg
-                  fill="#FFFFFF"
-                  xmlns="http://www.w3.org/3000/svg"
-                  viewBox="0 0 50 50"
-                  width="28px"
-                  height="28px"
-                >
-                  <path
-                    d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z"
-                  />
-                </svg>
-                <svg fill="#fff" xmlns="http://www.w3.org/3000/svg" viewBox="0 0 24 24" width="32px" height="32px">    <path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
-                <svg fill="#fff" xmlns="http://www.w3.org/3000/svg" viewBox="0 0 24 24" width="32px" height="32px"><path d="M 3.375 2 L 2 5.625 L 2 20 L 7 20 L 7 23 L 10 23 L 13 20 L 17 20 L 22 15 L 22 2 Z M 6 4 L 20 4 L 20 13 L 17 16 L 12 16 L 9 19 L 9 16 L 6 16 Z M 10 7 L 10 13 L 12 13 L 12 7 Z M 14 7 L 14 13 L 16 13 L 16 7 Z"/></svg>
+              </div>
+              <!-- <div style="padding: 2rem 3rem;">
+                <img
+                  src="http://127.0.0.1:5500/imgs/step-1.png"
+                  class="responsive-img"
+                />
+              </div> -->
+            </div>
+            <div class="col s12 l4 step">
+              <div class="flexbox">
+                <div style="flex-shrink: 0;">
+                  <span class="index-circle">2</span>
+                </div>
+                <div class="flexbox flex-column">
+                  <p class="step-title">Laborum et dolorum fuga.</p>
+                  <p class="step-description">
+                    accusantium doloremque laudantium, totam rem aperiam, eaque
+                    ipsa quae ab illo inventore.
+                  </p>
+                </div>
+              </div>
+              <!-- <div style="padding: 2rem 3rem;">
+                <img
+                  src="http://127.0.0.1:5500/imgs/step-2.png"
+                  class="responsive-img"
+                />
+              </div> -->
+            </div>
+            <div class="col s12 l4 step">
+              <div class="flexbox">
+                <div style="flex-shrink: 0;">
+                  <span class="index-circle">3</span>
+                </div>
+                <div class="flexbox flex-column">
+                  <p class="step-title">Totam rem aperiam, eaque</p>
+                  <p class="step-description">
+                    accusantium doloremque laudantium, totam rem aperiam, eaque
+                    ipsa quae ab illo inventore.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>               
         </div>
-        
-      </footer>
+      </section>
+      <section id="guild-structure" class="flexbox section-pad">
+        <div class="container">
+          <p class="section-title">Guild Structure</p>
+          <p class="section-description">
+            Aisenfield Teams consist of dedicated individuals who have the
+            experience and expertise to analyze and provide transformative
+            products and services. No matter how difficult the engagement, we
+            come up with innovative products and solutions that remove
+            complexities to create a seamless experience for the client.
+          </p>
+          <div
+            class="row flexbox flex-wrap justify-center photo-container"
+            style="margin-right: -1rem;"
+          >
+            <div class="photo col s5 m6 l3">
+              <div class="person-container">
+                <p class="person-name">Todd Howard</p>
+                <p class="person-title">Commissioner</p>
+              </div>
+            </div>
+            <div class="photo col s5 m6 l3">
+              <div class="person-container">
+                <p class="person-name">Gabe Newell</p>
+                <p class="person-title">Leader</p>
+              </div>
+            </div>
+            <div class="photo col s5 m6 l3">
+              <div class="person-container">
+                <p class="person-name">Gandalf</p>
+                <p class="person-title">Co-Leader</p>
+              </div>
+            </div>
+            <div class="photo col s5 m6 l3">
+              <div class="person-container">
+                <p class="person-name">Ricardo</p>
+                <p class="person-title">CTO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="stats flexbox">
+        <div class="container">
+          <p class="stats-title">Trusted By Adventurers All Over The World</p>
+          <p class="stats-description">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores et quas molestias.
+          </p>
+          <div class="row">
+            <div class="col s4">
+              <div class="flexbox justify-center items-center flex-column">
+                <p class="stat">144K</p>
+                <p class="stat-description">
+                  Job Posted
+                </p>
+              </div>
+            </div>
+            <div class="col s4">
+              <div class="flexbox justify-center items-center flex-column">
+                <p class="stat">24/7H</p>
+                <p class="stat-description">
+                  Web Uptime
+                </p>
+              </div>
+            </div>
+            <div class="col s4">
+              <div class="flexbox justify-center items-center flex-column">
+                <p class="stat">400K</p>
+                <p class="stat-description">
+                  Member Registered
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="faq" class="section-pad">
+        <div class="container">
+          <p class="section-title">Frequently Asked Question</p>
+          <div class="divider divider-m" style="margin: 2rem 0;"></div>
+          <div class="question-container">
+            <div class="row">
+              <div class="col s12 flexbox items-center">
+                <p class="question-title flex-1">How do i join?</p>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  fill="#6b7280"
+                  id="q-drop"
+                >
+                  <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                  <path d="M0 0h24v24H0z" fill="none" />
+                </svg>
+              </div>
+              <div class="col s12 question-answer" id="q-answer">
+                <p>
+                  Klik tombol register pada section paling atas lalu hubungkan
+                  akun Aisenfield anda dengan sosial akun yang didukung oleh
+                  Aisenfield, lalu isi formulir pendaftaran.
+                </p>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+              <div class="col s12 flexbox items-center">
+                <p class="question-title flex-1">
+                  Are there any criterias of acceptable posted jobs ?
+                </p>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  fill="#6b7280"
+                  id="q-drop"
+                >
+                  <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                  <path d="M0 0h24v24H0z" fill="none" />
+                </svg>
+              </div>
+              <div class="col s12 question-answer" id="q-answer">
+                <p>
+                  Tidak ada kriteria dalam job. Aisenfield menerima semua jenis
+                  job.
+                </p>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+              <div class="col s12 flexbox items-center">
+                <p class="question-title flex-1">
+                  Can you explain how a new job can be posted until the rewards
+                  are given ?
+                </p>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  fill="#6b7280"
+                  id="q-drop"
+                >
+                  <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                  <path d="M0 0h24v24H0z" fill="none" />
+                </svg>
+              </div>
+              <div class="col s12 question-answer" id="q-answer">
+                <p>
+                  1. Member memposting sebuah job, menentukan deskripsi job dan
+                  rewardnya di dashboard. <br />
+                  2. Member mentransfer jumlah rewards yang telah ditentukan ke
+                  rekening Guild. <br />
+                  3. Pekerja yang merasa cocok dengan deskripsi dan rewardsnya
+                  akan mengambil pekerjaan tersebut. <br />
+                  4. Saat pekerja selesai melakukan pekerjaannya, Member
+                  (Employer) memberikan konfirmasi ke guild bahwa pekerja telah
+                  menyelesaikan pekerjaannya. <br />
+                  5. Guild menyetujui konfirmasi tersebut dan mentransfer reward
+                  ke akun pekerja tersebut. <br />
+                </p>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+              <div class="col s12 flexbox items-center">
+                <p class="question-title flex-1">
+                  Can you explain about membership ranks and their criteria ?
+                </p>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  fill="#6b7280"
+                  id="q-drop"
+                >
+                  <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                  <path d="M0 0h24v24H0z" fill="none" />
+                </svg>
+              </div>
+              <div class="col s12 question-answer" id="q-answer">
+                <p>
+                  Ada lima rank dalam Aisenfield yaitu: Iron, Bronze, Silver,
+                  Gold, Platinum. Setiap rank memiliki reward, benefit, dan exp
+                  requirement yang berbeda.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+        </div>
+      </section>
     </main>
-    <script>
-      const autoplay = () => {
-        $(".carousel").carousel("next");
-        setTimeout(autoplay, 3000);
-      };
-      $(document).ready(function () {
-        $(".sidenav").sidenav();
-        $(".carousel#news").carousel(
-          {
-            fullWidth: true,
-            padding: 16,
-          },
-          setTimeout(autoplay, 3000)
-        );
-        $(".carousel#live-stream").carousel(
-          {
-            fullWidth: true,
-            padding: 16,
-          },
-          setTimeout(autoplay, 3000)
-        );
-      });
-    </script>
+    <footer class="page-footer" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col s6 m6 l3" style="margin-bottom: 1rem;">
+            <p class="footer-title">About Us</p>
+            <a class="footer-item" href="#">About Aisenfield</a>
+            <a class="footer-item" href="#">News</a>
+            <a class="footer-item" href="#">Resources</a>
+            <a class="footer-item" href="#">Blog</a>
+            <a class="footer-item" href="#">About Aisenfield</a>
+            <a class="footer-item" href="#">Privacy Policy</a>
+          </div>
+          <div class="col s6 m6 l3" style="margin-bottom: 1rem;">
+            <p class="footer-title">Worker</p>
+            <a class="footer-item" href="#">Workflow</a>
+            <a class="footer-item" href="#">Payment</a>
+            <a class="footer-item" href="#">Cash Withdrawal</a>
+            <a class="footer-item" href="#">Early Bonus</a>
+            <a class="footer-item" href="#">Tips & Tricks</a>
+          </div>
+          <div class="col s6 m6 l3" style="margin-bottom: 1rem;">
+            <p class="footer-title">Employer</p>
+            <a class="footer-item" href="#">How to post a job</a>
+            <a class="footer-item" href="#">Payment</a>
+            <a class="footer-item" href="#">Tips & Tricks</a>
+          </div>
+          <div class="col s6 m6 l3" style="margin-bottom: 1rem;">
+            <p class="footer-title">Contact Us</p>
+            <div class="footer-item flexbox">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                height="18"
+                width="18"
+                fill="currentColor"
+                style="flex-shrink: 0;"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                />
+                <path d="M0 0h24v24H0z" fill="none" />
+              </svg>
+              <p style="margin: 0 0 0 0.5rem;">
+                Rawamangun, Pulo Gadung, Jakarta Timur, DKI Jakarta 13220.
+              </p>
+            </div>
+            <div class="footer-item flexbox" style="margin-top: 0.75rem;">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="18"
+                viewBox="0 0 24 24"
+                width="18"
+                fill="currentColor"
+                style="flex-shrink: 0;"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+                <path d="M0 0h24v24H0z" fill="none" />
+              </svg>
+              <p style="margin: 0 0 0 0.5rem;">
+                aisen-hq@aisenfield.com
+              </p>
+            </div>
+            <div class="footer-item flexbox" style="margin-top: 0.75rem;">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="18"
+                viewBox="0 0 24 24"
+                width="18"
+                fill="currentColor"
+                style="flex-shrink: 0;"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+                />
+              </svg>
+              <p style="margin: 0 0 0 0.5rem;">
+                +(62) 821-1482-9999
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © Aisenfield 2020
+          <div class="right flexbox items-center social-group">
+            <svg
+              fill="#fff"
+              xmlns="http://www.w3.org/3000/svg"
+              viewBox="0 0 32 32"
+              width="24px"
+              height="24px"
+            >
+              <path
+                d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"
+              ></path>
+            </svg>
+            <svg
+              fill="#fff"
+              xmlns="http://www.w3.org/3000/svg"
+              viewBox="0 0 50 50"
+              width="18px"
+              height="18px"
+            >
+              <path
+                d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"
+              ></path>
+            </svg>
+            <svg
+              fill="#FFFFFF"
+              xmlns="http://www.w3.org/3000/svg"
+              viewBox="0 0 50 50"
+              width="20px"
+              height="20px"
+            >
+              <path
+                d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z"
+              ></path>
+            </svg>
+            <svg
+              fill="#fff"
+              xmlns="http://www.w3.org/3000/svg"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <path
+                d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,378 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+  /* font-size: 16; */
+}
+nav {
+  background-color: white;
+  z-index: 99;
+  position: relative;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: rgb(249, 247, 252); */
+}
+.logo {
+  display: inline-block;
+  height: 100%;
+  font-weight: 500;
+  color: #202124 !important;
+}
+
+.logo > svg {
+  vertical-align: middle;
+  width: 1.5rem;
+  display: inline-block;
+}
+.logo > p {
+  display: inline-block;
+}
+
+.nav-content {
+  background-color: #f7f9fa;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.flexbox {
+  display: flex !important;
+}
+nav ul a {
+  color: #1a202c !important;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+main {
+  color: #1a202c;
+}
+main p {
+  margin: 0;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  font-weight: 500;
+}
+.hero-description {
+  margin: 1rem 0 2.5rem 0;
+  color: #718096;
+}
+
+section#hero {
+  margin-top: -4rem;
+  position: relative;
+  overflow: hidden;
+  /* margin-bottom: 2rem; */
+  display: flex;
+  padding: 10rem 0;
+  /* min-height: 56rem; */
+}
+section#job-workflow {
+  background-color: rgb(247, 247, 247);
+}
+section#why-join {
+  background-color: rgb(247, 247, 247);
+}
+
+section {
+}
+
+.hero-img {
+  height: 500px;
+  position: absolute;
+  z-index: -999;
+  bottom: 0;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  /* margin: auto; */
+}
+.cta-register {
+  background-color: #5850ec;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  line-height: 1.25rem;
+}
+.cta-register:hover {
+  background-color: #667eea;
+}
+
+.stats {
+  background-color: rgb(67, 55, 167);
+  padding: 4rem 4rem;
+}
+
+.stats p {
+  text-align: center;
+}
+
+.stats-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.stats-description {
+  color: #ebf4ff;
+  margin: 1rem 0 3rem 0;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.stat {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #fff;
+}
+@media screen and (max-width: 660px) {
+  .stat {
+    font-size: 2rem !important;
+  }
+}
+
+.stat-description {
+  color: #ebf4ff;
+  padding: 0 1rem;
+}
+
+.section-pad {
+  padding: 4rem 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.step {
+  padding: 0 1.5rem !important;
+}
+.step-index {
+  margin-right: 1rem;
+  position: relative;
+  padding: 2rem;
+  background-color: red;
+  flex-shrink: 0;
+}
+.index-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: #3182ce;
+  margin-right: 1rem;
+  color: white;
+  line-height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+
+
+.circle-index {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  background-color: red;
+  top: 0;
+  left: 0;
+  right: 0;
+} */
+
+.step-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.step-description {
+  line-height: 1.5rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.section-description {
+  text-align: center;
+  margin: 1rem 0 3rem 0;
+  line-height: 1.5rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+.photo {
+  max-width: 200px;
+  background-color: red;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0 !important;
+  position: relative;
+  border-radius: 0.5rem;
+  height: 24rem;
+}
+
+@media screen and (max-width: 660px) {
+  .photo {
+    height: 12rem;
+  }
+}
+
+.photo .person-container {
+  bottom: 0.75rem;
+  left: 0.75rem;
+  position: absolute;
+}
+
+.photo .person-name {
+  color: white;
+  font-size: 1.125rem;
+}
+
+.photo .person-title {
+  color: #a0aec0;
+  font-size: 0.875rem;
+}
+
+/* .photo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+} */
+
+.photo:nth-child(1) {
+  background-image: linear-gradient(
+      to top,
+      rgb(0, 0, 0),
+      transparent 50%,
+      transparent
+    ),
+    url("http://127.0.0.1:5500/imgs/tod-howard.jpg");
+  background-size: cover;
+}
+
+.photo:nth-child(2) {
+  background-image: linear-gradient(
+      to top,
+      rgb(0, 0, 0),
+      transparent 50%,
+      transparent
+    ),
+    url("http://127.0.0.1:5500/imgs/gabe-newell.png");
+  background-size: cover;
+}
+
+.photo:nth-child(4) {
+  background-image: linear-gradient(
+      to top,
+      rgb(0, 0, 0),
+      transparent 50%,
+      transparent
+    ),
+    url("http://127.0.0.1:5500/imgs/ricardo.jpg");
+  background-size: cover;
+}
+.photo:nth-child(3) {
+  background-image: linear-gradient(
+      to top,
+      rgb(0, 0, 0),
+      transparent 50%,
+      transparent
+    ),
+    url("http://127.0.0.1:5500/imgs/gandalf.jpg");
+  background-size: cover;
+}
+
+.photo-container {
+  min-height: 24rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.divider-m {
+  height: 2px !important;
+}
+
+.question-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  /* margin-bottom: 2rem; */
+}
+.flex-1 {
+  flex-grow: 1;
+}
+.question-answer {
+  color: #6b7280;
+  line-height: 1.5rem;
+  /* padding-top: 1rem !important; */
+  display: none;
+  /* max-height: 0px;
+  overflow: hidden; */
+}
+.question-answer p:first-child {
+  padding-top: 1rem !important;
+}
+section#faq svg {
+  cursor: pointer;
+  transition: transform 250ms ease;
+}
+.divider {
+  margin-bottom: 20px;
+}
+body {
+  user-select: none;
+}
+.page-footer {
+  background-color: #1a202c !important;
+}
+
+.footer-title {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.footer-item {
+  color: #e5e7eb;
+  font-size: 0.875rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.social-group > svg {
+  margin-left: 0.75rem;
+  cursor: pointer;
+}
+
+.footer-copyright {
+  margin-top: 4rem;
+}
+
+@media only screen and (min-width: 992px) {
+  #burger {
+    display: none !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

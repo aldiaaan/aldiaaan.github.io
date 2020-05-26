@@ -1,0 +1,47 @@
+main {
+  /* padding: 1rem 0; */
+}
+
+main p {
+  margin: 0;
+}
+#password-showed,
+#password-unshowed {
+  top: 35% !important;
+}
+.title {
+  margin-top: 2.25rem;
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #374151;
+}
+.profile-preview {
+  /* margin: -0.75rem; */
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.c-label {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.input-field {
+  /* margin-bottom: 1rem !important; */
+}
+
+.preview {
+  position: relative;
+}
+
+.edit-btn {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}

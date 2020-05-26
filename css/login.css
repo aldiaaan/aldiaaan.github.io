@@ -1,0 +1,131 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+body p {
+  margin: 0;
+}
+#input-container {
+  margin: 0;
+}
+form > .row {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  color: #1a202c;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+.row {
+  margin-bottom: 0px !important;
+}
+
+.login-container {
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  width: 24rem;
+  margin: auto;
+  padding: 1rem 0 0 0;
+}
+
+#password-showed,
+#password-unshowed {
+  top: 40% !important;
+}
+
+.login-container .title {
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+}
+.divider {
+  border: 1px solid #e2e8f0;
+}
+#input-container {
+  margin: 0;
+}
+.login-container form {
+  margin-top: 1.5rem;
+  padding: 0 1.5rem !important;
+}
+body {
+  background-image: url("http://127.0.0.1:5500/imgs/hyrule.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+input[type="checkbox"].filled-in:checked + span:not(.lever):after {
+  border: 2px solid #5a5a5a !important;
+  background-color: #616161 !important;
+}
+
+.input-field input:focus + label {
+  color: #3182ce !important;
+}
+
+.input-field input:focus {
+  border-bottom: 1px solid #3182ce !important;
+  box-shadow: 0 1px 0 0 #3182ce !important;
+}
+
+input[type="checkbox"].filled-in:checked + span:not(.lever):after {
+  border: 2px solid #5a5a5a !important;
+  background-color: #616161 !important;
+}
+
+.input-field input:focus + label {
+  color: #3182ce !important;
+}
+
+.input-field input:focus {
+  border-bottom: 1px solid #3182ce !important;
+  box-shadow: 0 1px 0 0 #3182ce !important;
+}
+.register-btn {
+  margin: 1rem 0 1rem 0;
+  background-color: #1a73e8;
+}
+
+.register-btn:hover {
+  background-color: #1a73e8;
+}
+
+.register-btn:focus {
+  background-color: #1a73e8;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sign-in-me {
+  color: #3182ce;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.sign-in-me:hover {
+  background-color: #f6fafe;
+}
