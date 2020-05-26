@@ -264,7 +264,7 @@ section {
       transparent 50%,
       transparent
     ),
-    url("http://127.0.0.1:5500/imgs/tod-howard.jpg");
+    url("https://aldiaaan.github.io/imgs/tod-howard.jpg");
   background-size: cover;
 }
 
@@ -275,7 +275,7 @@ section {
       transparent 50%,
       transparent
     ),
-    url("http://127.0.0.1:5500/imgs/gabe-newell.png");
+    url("https://aldiaaan.github.io/imgs/gabe-newell.png");
   background-size: cover;
 }
 
@@ -286,7 +286,7 @@ section {
       transparent 50%,
       transparent
     ),
-    url("http://127.0.0.1:5500/imgs/ricardo.jpg");
+    url("https://aldiaaan.github.io/imgs/ricardo.jpg");
   background-size: cover;
 }
 .photo:nth-child(3) {
@@ -296,7 +296,7 @@ section {
       transparent 50%,
       transparent
     ),
-    url("http://127.0.0.1:5500/imgs/gandalf.jpg");
+    url("https://aldiaaan.github.io/imgs/gandalf.jpg");
   background-size: cover;
 }
 
