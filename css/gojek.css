@@ -38,6 +38,8 @@ nav ul a {
 
 .card {
   border-radius: 0.75rem;
+  /* make all card have same height */
+  min-height: 22rem;
 }
 
 .page-footer {
