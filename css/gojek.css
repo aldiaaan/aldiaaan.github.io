@@ -1,0 +1,80 @@
+html {
+  font-family: "Nunito", sans-serif !important;
+  font-size: 16px !important;
+}
+
+p {
+  margin: 0;
+}
+
+.nav-wrapper {
+  background-color: white;
+}
+
+nav ul a {
+  color: #1c1d1d !important;
+}
+
+.carousel-section {
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.click-here {
+  background-color: #00aa13 !important;
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  text-transform: none;
+  transform: translateX(-50%);
+  border-radius: 18px;
+}
+
+.head-title {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.card {
+  border-radius: 0.75rem;
+}
+
+.page-footer {
+  background-color: #25282b;
+}
+.nav-wrapper > .container {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.card svg {
+  margin-top: 1.25rem;
+}
+.carousel {
+  min-height: 80vh;
+  background-color: transparent;
+  position: relative;
+}
+.carousel#second-carousel {
+  min-height: 60vh;
+}
+.carousel-item {
+  width: 100% !important;
+}
+
+#second-carousel img {
+  border-radius: 2rem;
+}
+#gojek-logo:hover {
+  background-color: transparent !important;
+}
+
+.dropdown-gojek {
+  width: 100vw !important;
+  background-color: white;
+  position: absolute;
+  left: 0 !important;
+  color: #1c1d1d;
+  top: -64px;
+}
