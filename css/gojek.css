@@ -60,6 +60,10 @@ nav ul a {
 }
 .carousel#second-carousel {
   min-height: 60vh;
+  position: unset !important;
+}
+#second-carousel-wrapper {
+  position: relative;
 }
 .carousel-item {
   width: 100% !important;
@@ -79,4 +83,26 @@ nav ul a {
   left: 0 !important;
   color: #1c1d1d;
   top: -64px;
+}
+
+.carousel-btn {
+  border-radius: 9999px;
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.p-left {
+  left: -4rem;
+}
+
+.p-right {
+  right: -4rem;
 }
